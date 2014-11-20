@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">IdentityValidation</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="stu_validation_title">本机验证人数：%1$d 人  验证方式: %2$s</string>
+    <string name="stu_total_count">考生信息总数为：%d</string>
+    <string name="stu_pass_count">通过的考生数据为：%d</string>
+</resources>

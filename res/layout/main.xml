@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/entity_height"
+        android:layout_below="@+id/text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/entity_margin_left"
+        android:layout_marginRight="@dimen/entity_margin_right"
+        android:layout_marginTop="@dimen/entity_margin_top" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_stu_valiadate"
+                    android:layout_width="@dimen/main_button_width"
+                    android:layout_height="@dimen/main_button_height"                    
+                    android:text="学生验证" />
+
+                <Button
+                    android:id="@+id/btn_teacher_sign_in"
+                    android:layout_width="@dimen/main_button_width"
+                    android:layout_height="@dimen/main_button_height"
+                    android:layout_marginLeft="@dimen/main_button_margin"
+                    android:text="教师签到" />
+
+                <Button
+                    android:id="@+id/btn_exam_info"
+                    android:layout_width="@dimen/main_button_width"
+                    android:layout_height="@dimen/main_button_height"
+                    android:layout_marginLeft="@dimen/main_button_margin"
+                    android:text="考试信息" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/main_button_margin"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_import"
+                    android:layout_width="@dimen/main_button_width"
+                    android:layout_height="@dimen/main_button_height"
+                    android:text="资料导入" />
+
+                <Button
+                    android:id="@+id/btn_export"
+                    android:layout_width="@dimen/main_button_width"
+                    android:layout_height="@dimen/main_button_height"
+                    android:layout_marginLeft="@dimen/main_button_margin"
+                    android:text="信息导出" />
+
+                <Button
+                    android:id="@+id/btn_settings"
+                    android:layout_width="@dimen/main_button_width"
+                    android:layout_height="@dimen/main_button_height"
+                    android:layout_marginLeft="@dimen/main_button_margin"
+                    android:text="系统设定" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

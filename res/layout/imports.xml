@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3333333" />
+    
+    <RelativeLayout
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/entity_height"
+        android:layout_below="@+id/text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/entity_margin_left"
+        android:layout_marginRight="@dimen/entity_margin_right"
+        android:layout_marginTop="@dimen/entity_margin_top"
+        android:background="#FFFAFA" >
+
+        <RadioGroup
+            android:id="@+id/RdoImport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" >
+
+            <RadioButton
+                android:id="@+id/import_online"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="在线导入"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/import_offline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="离线导入"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000" />
+        </RadioGroup>
+        
+        <TextView 
+	        android:id="@+id/stuCount"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/RdoImport"
+	        android:layout_below="@+id/RdoImport"
+	        android:layout_marginTop="10dp"
+	        android:textColor="#000000"
+	        android:text="考试信息总数为：2"
+	        />
+	</RelativeLayout>
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/info"
+        android:layout_marginTop="@dimen/button_margin_top"
+        android:orientation="horizontal"
+        >
+        <Button 
+            android:id="@+id/imports"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:text="导入"
+            />
+        <Button 
+            android:id="@+id/clear"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/button_margin_left"
+            android:text="清空"
+            />
+		<Button 
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/button_margin_left"
+            android:text="返回"
+            />
+    </LinearLayout>
+</RelativeLayout>    

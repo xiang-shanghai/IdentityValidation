@@ -1,0 +1,295 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3333333" />
+
+    <RelativeLayout
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/entity_height"
+        android:layout_below="@+id/text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/entity_margin_left"
+        android:layout_marginRight="@dimen/entity_margin_right"
+        android:layout_marginTop="@dimen/entity_margin_top"
+        android:background="#FFFAFA" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <TextView
+                android:id="@+id/subject"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:gravity="right"
+                android:text="考试科目 : "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/startTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/subject"
+                android:layout_below="@+id/subject"
+                android:layout_marginTop="2dp"
+                android:singleLine="true"
+                android:text="开始时间 : "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/endTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/subject"
+                android:layout_below="@+id/startTime"
+                android:singleLine="true"
+                android:layout_marginTop="2dp"
+                android:text="结束时间 : "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/forbidTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/subject"
+                android:layout_below="@+id/endTime"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:singleLine="true"
+                android:text="禁止签到时间 : "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/checkway"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/subject"
+                android:layout_below="@+id/forbidTime"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:text="验证方式: "
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/onoffline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/subject"
+                android:layout_below="@+id/checkway"
+                android:singleLine="true"
+                android:text="离线在线: "
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/checkmode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/subject"
+                android:layout_below="@+id/onoffline"
+                android:singleLine="true"
+                android:text="验证模式: "
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/displaypic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/subject"
+                android:layout_below="@+id/checkmode"
+                android:singleLine="true"
+                android:text="显示照片: "
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/edtSubject"
+                android:layout_width="@dimen/settings_editbox_width"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/subject"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@+id/subject"
+                android:hint="数学"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ff0000" />
+
+            <EditText
+                android:id="@+id/edtStartTime"
+                android:layout_width="@dimen/settings_editbox_width"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/startTime"
+                android:layout_alignLeft="@+id/edtSubject"
+                android:layout_toRightOf="@+id/startTime"
+                android:hint="2014-07-29 14:00:00"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ff0000" />
+
+            <EditText
+                android:id="@+id/edtEndTime"
+                android:layout_width="@dimen/settings_editbox_width"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/endTime"
+                android:layout_alignLeft="@+id/edtSubject"
+                android:layout_toRightOf="@+id/endTime"
+                android:hint="2014-07-29 16:00:00"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ff0000" />
+
+            <EditText
+                android:id="@+id/edtForbidSignTime"
+                android:layout_width="@dimen/settings_editbox_width"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/forbidTime"
+                android:layout_alignLeft="@+id/edtSubject"
+                android:layout_toRightOf="@+id/forbidTime"
+                android:hint="2014-07-29 16:00:00"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ff0000" />
+
+            <RadioGroup
+                android:id="@+id/rdoValidateMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/checkway"
+                android:layout_alignLeft="@+id/edtSubject"
+                android:layout_alignTop="@+id/checkway"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/validateMode_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="仅身份证"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000" />
+
+                <RadioButton
+                    android:id="@+id/validateMode_id_fingerprint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="身份证加指纹"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rdoInOrOutLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/onoffline"
+                android:layout_alignLeft="@+id/edtSubject"
+                android:layout_alignTop="@+id/onoffline"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/inOrOutLine_out"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="离线"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000" />
+
+                <RadioButton
+                    android:id="@+id/inOrOutLine_int"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="在线"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rdoMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/checkmode"
+                android:layout_alignLeft="@+id/edtSubject"
+                android:layout_alignTop="@+id/checkmode"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/mode_channel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="通道模式"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000" />
+
+                <RadioButton
+                    android:id="@+id/mode_room"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="考场模式"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rdoPic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/displaypic"
+                android:layout_alignLeft="@+id/edtSubject"
+                android:layout_alignTop="@+id/displaypic"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/pic_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="显示"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000" />
+
+                <RadioButton
+                    android:id="@+id/pic_notDisplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="不显示"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000" />
+            </RadioGroup>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/info"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/button_margin_top"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:text="保存" />
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/button_margin_left"
+            android:text="返回" />
+    </LinearLayout>
+
+</RelativeLayout>
